@@ -20,7 +20,13 @@ export class ProjectsComponent {
       title: 'Projeto de localização de pets desaparecidos "AquidaPet"',
       width: '202px',
       height: '130px',
-      description: '<p>Projeto de localização de pets desaparecidos "AquidaPet"</p>',
+      description: `
+        <p>
+          Projeto de localização de pets desaparecidos "AquidaPet" apresentado como
+          requisito para obtenção da nota parcial das atividades da unidade
+          curricular Programação para Dispositivos Móveis II do <a href="https://www.ifms.edu.br/campi/campus-aquidauana/cursos/graduacao/sistemas-para-internet/sistemas-para-internet" target="_blank">Curso Superior de
+          Tecnologia em Sistemas para Internet</a> do IFMS <i>câmpus</i> Aquidauana.
+        </p>`,
       links: [
         { name: 'Conheça o projeto', href: 'https://github.com/mdccg/aquidapet-showcase' }
       ]
@@ -74,7 +80,8 @@ export class ProjectsComponent {
   public openDialog(data: IProjects): void {
     this.#dialog.open(DialogProjectsComponent, {
       data,
-      panelClass: EDialogPanelClass.PROJECTS
+      panelClass: EDialogPanelClass.PROJECTS,
+      maxWidth: '850px',
     });
   }
 }

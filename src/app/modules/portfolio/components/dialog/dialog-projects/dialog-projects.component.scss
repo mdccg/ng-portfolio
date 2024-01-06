@@ -2,10 +2,18 @@
   width: 850px;
 }
 
+::ng-deep .dialog-container-projects .mdc-dialog__container article p a {
+  color: var(--grey);
+  text-decoration: underline;
+}
+
 :host {
   padding: 10px 30px;
 
+  // overflow-x: hidden;
+
   flex-direction: column;
+  flex-wrap: wrap;
   display: flex;
 
   header, h3, p, mat-dialog-content {
@@ -43,7 +51,7 @@
     margin-bottom: 15px;
     
     p {
-      font-size: 16px;   
+      font-size: 16px;
     }
   }
 
